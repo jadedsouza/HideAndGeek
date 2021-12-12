@@ -1,0 +1,235 @@
+@font-face {
+	font-family: Apercu;
+	src: url(../fonts/apercu/Apercu-Light.eot);
+	src: url(../fonts/apercu/Apercu-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/apercu/Apercu-Light.woff2) format("woff2"), url(../fonts/apercu/Apercu-Light.woff) format("woff"), url(../fonts/apercu/Apercu-Light.ttf) format("truetype"), url(../fonts/apercu/Apercu-Light.svg#Apercu-Light) format("svg");
+	font-weight: 300;
+	font-style: normal
+}
+
+@font-face {
+	font-family: Apercu;
+	src: url(../fonts/apercu/Apercu-LightItalic.eot);
+	src: url(../fonts/apercu/Apercu-LightItalic.eot?#iefix) format("embedded-opentype"), url(../fonts/apercu/Apercu-LightItalic.woff2) format("woff2"), url(../fonts/apercu/Apercu-LightItalic.woff) format("woff"), url(../fonts/apercu/Apercu-LightItalic.ttf) format("truetype"), url(../fonts/apercu/Apercu-LightItalic.svg#Apercu-LightItalic) format("svg");
+	font-weight: 300;
+	font-style: italic
+}
+
+@font-face {
+	font-family: Apercu;
+	src: url(../fonts/apercu/Apercu-Regular.eot);
+	src: url(../fonts/apercu/Apercu-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/apercu/Apercu-Regular.woff2) format("woff2"), url(../fonts/apercu/Apercu-Regular.woff) format("woff"), url(../fonts/apercu/Apercu-Regular.ttf) format("truetype"), url(../fonts/apercu/Apercu-Regular.svg#Apercu-Regular) format("svg");
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+	font-family: Apercu;
+	src: url(../fonts/apercu/Apercu-Italic.eot);
+	src: url(../fonts/apercu/Apercu-Italic.eot?#iefix) format("embedded-opentype"), url(../fonts/apercu/Apercu-Italic.woff2) format("woff2"), url(../fonts/apercu/Apercu-Italic.woff) format("woff"), url(../fonts/apercu/Apercu-Italic.ttf) format("truetype"), url(../fonts/apercu/Apercu-Italic.svg#Apercu-Italic) format("svg");
+	font-weight: 400;
+	font-style: italic
+}
+
+@font-face {
+	font-family: Apercu;
+	src: url(../fonts/apercu/Apercu-Medium.eot);
+	src: url(../fonts/apercu/Apercu-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/apercu/Apercu-Medium.woff2) format("woff2"), url(../fonts/apercu/Apercu-Medium.woff) format("woff"), url(../fonts/apercu/Apercu-Medium.ttf) format("truetype"), url(../fonts/apercu/Apercu-Medium.svg#Apercu-Medium) format("svg");
+	font-weight: 500;
+	font-style: normal
+}
+
+@font-face {
+	font-family: Apercu;
+	src: url(../fonts/apercu/Apercu-MediumItalic.eot);
+	src: url(../fonts/apercu/Apercu-MediumItalic.eot?#iefix) format("embedded-opentype"), url(../fonts/apercu/Apercu-MediumItalic.woff2) format("woff2"), url(../fonts/apercu/Apercu-MediumItalic.woff) format("woff"), url(../fonts/apercu/Apercu-MediumItalic.ttf) format("truetype"), url(../fonts/apercu/Apercu-MediumItalic.svg#Apercu-MediumItalic) format("svg");
+	font-weight: 500;
+	font-style: italic
+}
+
+@font-face {
+	font-family: Apercu;
+	src: url(../fonts/apercu/Apercu-Bold.eot);
+	src: url(../fonts/apercu/Apercu-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/apercu/Apercu-Bold.woff2) format("woff2"), url(../fonts/apercu/Apercu-Bold.woff) format("woff"), url(../fonts/apercu/Apercu-Bold.ttf) format("truetype"), url(../fonts/apercu/Apercu-Bold.svg#Apercu-Bold) format("svg");
+	font-weight: 700;
+	font-style: normal
+}
+
+@font-face {
+	font-family: Apercu;
+	src: url(../fonts/apercu/Apercu-BoldItalic.eot);
+	src: url(../fonts/apercu/Apercu-BoldItalic.eot?#iefix) format("embedded-opentype"), url(../fonts/apercu/Apercu-BoldItalic.woff2) format("woff2"), url(../fonts/apercu/Apercu-BoldItalic.woff) format("woff"), url(../fonts/apercu/Apercu-BoldItalic.ttf) format("truetype"), url(../fonts/apercu/Apercu-BoldItalic.svg#Apercu-BoldItalic) format("svg");
+	font-weight: 700;
+	font-style: italic
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+body, html {
+  margin-top: 5px;
+  margin-left: 50px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #fff;
+	color: #444452;
+	font-family: Apercu, "Source Sans Pro", system, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	width: 100%
+}
+
+.intro__hello {
+  font-weight: 300;
+}
+
+#image {
+  height: 666px;
+  width: 1000px;
+  top: 0;
+  left: 0;
+  position: relative;
+}
+
+.point {
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	z-index: 2;
+	border-radius: 50%;
+}
+
+img {
+  height: 666px;
+  width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+div.item {
+	display: inline-block;
+}
+
+.txtimg > img{
+  display: block;
+}
+
+p {
+  text-align: center;
+}
+
+#result {
+  position: absolute;
+  width: 900px;
+  top: 600px;
+  margin-left: 1050px;
+  padding: 0;
+}
+
+.emoji {
+	display: inline-block;
+	vertical-align: text-top;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center
+}
+
+.intro__hello .emoji,
+.intro__tagline .emoji {
+	width: 40px;
+	height: 40px
+}
+
+.intro__hello .wave-hand {
+	background-image: url(../images/emojis/wave.png);
+	margin-left: 10px;
+	cursor: pointer
+}
+
+.intro__hello .wave-hand.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both
+}
+
+.intro__hello .wave-hand.wave {
+	-webkit-animation-name: wave;
+	animation-name: wave
+}
+
+@-webkit-keyframes wave {
+	from {
+		-webkit-transform: none;
+		transform: none
+	}
+	15% {
+		-webkit-transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+		transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg)
+	}
+	30% {
+		-webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg);
+		transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg)
+	}
+	45% {
+		-webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg);
+		transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg)
+	}
+	60% {
+		-webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+		transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg)
+	}
+	75% {
+		-webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
+		transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg)
+	}
+	to {
+		-webkit-transform: none;
+		transform: none
+	}
+}
+
+@keyframes wave {
+	from {
+		-webkit-transform: none;
+		transform: none
+	}
+	15% {
+		-webkit-transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+		transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg)
+	}
+	30% {
+		-webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg);
+		transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg)
+	}
+	45% {
+		-webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg);
+		transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg)
+	}
+	60% {
+		-webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+		transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg)
+	}
+	75% {
+		-webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
+		transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg)
+	}
+	to {
+		-webkit-transform: none;
+		transform: none
+	}
+}
+
+.intro__tagline {
+	font-weight: 300;
+	max-width: 1000px
+}
+
+.intro__tagline .name {
+	font-weight: 700
+}
+
+.intro__tagline .technologist {
+	background-image: url(../images/emojis/technologist.png)
+}
+

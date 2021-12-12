@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>UW Hide & Geek</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="javascripts/script.js"></script>
+    <script src="javascripts/headerScripts.js"></script>
+    <script src="javascripts/api.js"></script>
+    <script src="javascripts/clickFunctions.js"></script>
+    <script src="javascripts/styleUpdates.js"></script>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <meta charset="utf-8">
+  </head>
+
+  <body onLoad="waveOnLoad()">
+    <header id="header" class="intro">
+      <h1 class="intro__hello"> <span id="hiThere">Hi!</span>
+        <span class="emoji wave-hand animated"></span>
+      </h1>
+      <h2 id="hider-seeker"></h2>
+      <h2 id="game-status"></h2>
+    </header>
+
+    <div id="welcome-message" class="item">
+      <h2 class="intro__tagline">Welcome to
+        <span class="name">UW's Hide and Geek.</span> Play around and find your friends!
+        <span class="emoji technologist"></span>
+        <div id="starterLogic">
+          To start, input your name here: <input id="username" type="text"> <br>
+          Select an icon color: <input type="color" id="colorIcon" value="#f6b73c">
+          <button id="beginGameButton" onClick="setUserInputs()">Begin Game!</button>
+        </div>
+        
+      </h2>
+    </div>
+
+    <div id="image">
+        <img src="images/uw-campus-map.jpg" alt="uw-map" onClick="mapClicked()">
+    </div>
+      
+    
+    <div id="result"></div>
+    <h2 id="role-status"></h2>
+
+  </body>
+</html>
