@@ -1,5 +1,5 @@
 # HIDE AND GEEK
-A game to help you discover the UW Campus with a fun leaderboard! Built using websockets, APIs, and some database calls.
+A game to help you discover the UW Campus with a fun leaderboard! Built using websockets, APIs, and some database calls. Created with [Bradley Knorr](https://github.com/IamSuperB4), [Connor Voelk](https://github.com/connorvoelk), and [Lauren Ng](https://github.com/laurenng).
 
 ## Game Instructions
 1. Open up https://hide.laurenng.me/, input your name, and optionally, pick a color! <br>
