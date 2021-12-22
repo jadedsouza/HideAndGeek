@@ -1,81 +1,10 @@
-// purpose of this file is to upload data into the database and make
-// get calls
-import mongoose from "mongoose";
 import express from 'express';
 import pointInPolygon from 'point-in-polygon'
 
+import {uploadGameToDB, getBuildingJSON, getTargetBuilding} from '../db.js'
 import { getGameHiderBuilding } from './websocket.js';
-//const game = require('./app.js')
 
 var router = express.Router();
-
-main().catch(err => console.log(err));
-
-let Building
-let Game
-let INF = 10000
-
-class Point
-{
-    constructor(x,y)
-    {
-        this.x = x;
-        this.y = y;
-    }
-}
-
-async function main() {
-  await mongoose.connect(`mongodb+srv://jadedsouza:info441@cluster0.7hskm.mongodb.net/GeneralData`);
-
-  const buildingSchema = new mongoose.Schema({
-    name: String,
-    symbol: String,
-    LT_X: Number, 
-    LT_Y: Number,
-    RT_X: Number,
-    RT_Y: Number,
-    LB_X: Number,
-    LB_Y: Number,
-    RB_X: Number,
-    RB_Y: Number,
-    T_X: Number,
-    T_Y: Number
-  });
-  Building = mongoose.model('uwbuildings', buildingSchema);
-
-  const gameSchema = new mongoose.Schema({
-    gameID: String,
-    seekerUsername: String,
-    hiderUsername: String, 
-    hiderBuilding: String,
-    seekerGuesses: [String],
-    winner: String,
-  });
-  Game = mongoose.model('games', gameSchema);
-}
-
-// uploads game data into database
-async  function uploadGameToDB(game){ 
-  let gameID = game.hider.gameID
-  let seekerUsername = game.seeker.username
-  let hiderUsername = game.hider.username
-  let hiderBuilding = game.hiderBuilding
-  let seekerGuesses = game.seekerGuesses
-  let winner = game.winner
-  console.log('uploading game:', gameID, 'to mongo')
-  let newGame = new Game({
-    gameID,
-    seekerUsername,
-    hiderUsername,
-    hiderBuilding,
-    seekerGuesses,
-    winner
-  })
-
-  let gameForDB = await newGame.save()
-  console.log(gameForDB)
-  //we can send a json saying status:success
-}
 
 // GETS Building Data 
 router.get('/building', async function(req, res, next) {
@@ -83,22 +12,8 @@ router.get('/building', async function(req, res, next) {
   try {
       let cursor = [req.query.cursorx, req.query.cursory]
 
-      let allBuildings = await Building.find();
+      let buildingJSON = await getBuildingJSON() // get buildings from db
 
-      let buildingJSON = await Promise.all(allBuildings.map(async (buildingInfo) => {
-          return {
-            Name: buildingInfo.name,
-            Symbol: buildingInfo.symbol,
-            LT_X: buildingInfo.LT_X, 
-            LT_Y: buildingInfo.LT_Y,
-            RT_X: buildingInfo.RT_X,
-            RT_Y: buildingInfo.RT_Y,
-            LB_X: buildingInfo.LB_X,
-            LB_Y: buildingInfo.LB_Y,
-            RB_X: buildingInfo.RB_X,
-            RB_Y: buildingInfo.RB_Y
-          };
-      }));
       buildingJSON.forEach((building) => {
         let buildingPolygon = [[building.LT_X, building.LT_Y,],
                               [building.RT_X, building.RT_Y,],
@@ -121,7 +36,7 @@ router.get('/building', async function(req, res, next) {
 router.get('/buildingTarget', async function(req, res, next) {
   let buildingName = req.query.name.toString();
 
-  let targetBuilding = await Building.find({name: buildingName}).exec();
+  let targetBuilding = await getTargetBuilding(buildingName)
 
   res.json({
     x: targetBuilding[0].T_X, 
@@ -132,7 +47,7 @@ router.get('/buildingTarget', async function(req, res, next) {
 router.get('/centerBuilding', async function(req, res, next) {
   let buildingName = req.query.building;
   
-  let targetBuilding = await Building.find({name: buildingName}).exec();
+  let targetBuilding = await getTargetBuilding(buildingName)
   
   res.json({
     x: targetBuilding[0].T_X, 
@@ -151,8 +66,9 @@ router.get('/compareBuildingDistance', async function(req, res, next) {
 
   //console.log(game.hiderBuilding);
 
-  let hidingBuildingObject = await Building.find({name: seekerSelectedBuildingName}).exec();
-  let seekerSelectedBuildingObject = await Building.find({name: hidingBuildingName}).exec();
+  let hidingBuildingObject = await getTargetBuilding(seekerSelectedBuildingName)
+
+  let seekerSelectedBuildingObject = await getTargetBuilding(hidingBuildingName)
 
   let distanceInPixels = calculateDistanceBetweenTwoBuildings(hidingBuildingObject[0], seekerSelectedBuildingObject[0]);
   let distanceInFeet = pixelsToFeet(distanceInPixels);

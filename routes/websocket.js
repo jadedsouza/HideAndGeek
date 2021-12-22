@@ -1,7 +1,7 @@
 import express from 'express';
 import enableWs from 'express-ws'; 
 
-import { uploadGameToDB } from './index.js'
+import { uploadGameToDB } from '../db.js'
 
 var router = express.Router();
 

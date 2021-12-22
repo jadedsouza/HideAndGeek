@@ -1,16 +1,15 @@
-# HIDE AND GEEK
-A game to help you discover the UW Campus with a fun leaderboard! Built using websockets, APIs, and some database calls.
+# PROJECT PROPOSAL - HIDE AND GEEK
 
 ## Game Instructions
-1. Open up https://hide.laurenng.me/, input your name, and optionally, pick a color! <br>
-2. Open up another https://hide.laurenng.me/, input your name, and optionally pick a color! <br>
+1. Open up https://www.hideandseekuw.me, input your name, and optionally, pick a color! <br>
+2. Open up another https://www.hideandseekuw.me, input your name, and optionally pick a color! <br>
 3. Assigning for a hider and seeker happens randomly. <br>
 4. If you are the hider, please choose a *building* on the UW Campus to hide in. This includes buildings like Suzzallo Library, Mary Gates Hall, Odegaard Undergraduate Library. (Remember, areas like red square are not buildings!) <br>
 5. The seeker should now be able to guess spots around campus to find the hider, and the match is over after 6 tries
 
 ### Note: <br> 
 1. Do not close your socket in the middle of the game. This means you forfeit the match and the other player wins the game. <br>
-2. If you click on a spot and it is not a valid spot, your dot will not appear. So pick another building! Our database has about 35-50 buildings in it. Some of them include: Suzzallo Library, Mary Gates Hall, Odegaard Undergraduate Library, Kane Hall, Smith Hall, Burke Museum, Nanoengineering and Sciences Building and Meany Hall. <br>
+buildings in it. Some of them include: Suzzallo Library, Mary Gates Hall, Odegaard Undergraduate Library, Kane Hall, Smith Hall, Burke Museum, Nanoengineering and Sciences Building and Meany Hall. <br>
 
 ## Project description
 The project our team has decided to work on is a virtual hide and seek game on the UW  campus. Most UW students (freshmen - juniors, first year - third year graduate students) are having their first in-person classes, and as a result, tend to get lost and do not know where most buildings are. An online activity that promotes learning about UW geography, without having to spend hours wandering around the campus would be an efficient way to become acquainted with the campus. An activity like this could be used by individual students who would find the activity fun, first year and transfer students and programs that support them (like FIGs) and upperclassmen of UW that want to show off their trivia skills they have accumulated through schlepping to class for years. Through an application that’s never been built before for the UW campus, this could be their opportunity to learn more about how the campus is structured and where buildings are in a gamified manner. Because of this game’s fun and easy-to-play nature it can additionally serve as a fun way for students or prospective applicants to interact with their friends. 

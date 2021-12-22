@@ -130,3 +130,7 @@ function updateGameStatus(currentGameStatus) {
   updateGameStatusText(currentGameStatus.gameText);
   gameStatus.currentTurn = currentGameStatus.currentTurn;
 }
+
+function goToLeaderBoard(){
+  location.href = '/leaderboard';
+}

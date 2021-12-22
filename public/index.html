@@ -2,13 +2,11 @@
   <head>
     <title>UW Hide & Geek</title>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="icon" href="images/favicon.ico" />
     <script src="javascripts/script.js"></script>
-    <script src="javascripts/headerScripts.js"></script>
     <script src="javascripts/api.js"></script>
     <script src="javascripts/clickFunctions.js"></script>
     <script src="javascripts/styleUpdates.js"></script>
-    <link rel="icon" href="images/favicon.png" />
-    <link rel="apple-touch-icon" href="images/favicon.png" />
     <meta charset="utf-8">
   </head>
 
@@ -20,6 +18,7 @@
       <h2 id="hider-seeker"></h2>
       <h2 id="game-status"></h2>
     </header>
+
 
     <div id="welcome-message" class="item">
       <h2 class="intro__tagline">Welcome to
@@ -37,8 +36,11 @@
     <div id="image">
         <img src="images/uw-campus-map.jpg" alt="uw-map" onClick="mapClicked()">
     </div>
+
+    <button class="nav" style="margin-top: 20px;" onClick="goToLeaderBoard()">
+      Leaderboard
+    </button>
       
-    
     <div id="result"></div>
     <h2 id="role-status"></h2>
 

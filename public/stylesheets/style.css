@@ -233,3 +233,26 @@ p {
 	background-image: url(../images/emojis/technologist.png)
 }
 
+.horizontal {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+button{
+	cursor: pointer;
+}
+
+button.nav{
+	background-color:rgb(68, 68, 226); 
+	color:white; 
+	font-size:21px; 
+	text-decoration:none; 
+	border-style:none;
+	border-radius: 6px;
+	padding:4px;
+}
+
+button.nav:hover{
+	background-color:rgb(38, 38, 207); 
+}
